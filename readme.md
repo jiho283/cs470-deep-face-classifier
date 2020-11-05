@@ -17,3 +17,21 @@ pip install git+http://github.com/Joeclinton1/google-images-download.git
 토끼상 : 방탄소년단 정국, 아이콘 바비, 워너원 박지훈, 엑소 수호, 안형섭, 수지, 트와이스 나연, 트와이스 다현, 이세영, 백진희
 
 대머리상 : from kaggle
+
+# Dataset download
+```
+$ wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1W5HKr-M1J98smLiF781jjiLVxl9hmq0i' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1W5HKr-M1J98smLiF781jjiLVxl9hmq0i" -O animal.zip && rm -rf /tmp/cookies.txt
+
+$ wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1yUAutv-VWkfUm1rvbzXcmtOaASvS3dwR' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1yUAutv-VWkfUm1rvbzXcmtOaASvS3dwR" -O bald.zip && rm -rf /tmp/cookies.txt
+```
+
+# Directory structure
+
+# Quick Start
+```
+
+$ python3 train.py --exp_name baseline --coeff 0 --learning_rate 4e-3 --batch_size 128 --n_epoch 100 --optim adamw --weight_decay 1e-5 --num_workers 16 --warmup 1 --mixup_prob 1 --mixup_alpha 1 --label_smoothing 0.05  
+
+$
+
+```
